@@ -1,0 +1,13 @@
+@host = http://localhost:3333/api/v1
+
+### Dashboard
+GET {{host}}/dashboard
+
+### login
+POST {{host}}/login
+Content-Type: application/json
+
+{
+	"username": "",
+	"password": "secret"
+}
