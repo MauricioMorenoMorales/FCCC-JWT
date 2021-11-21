@@ -1,5 +1,9 @@
 @host = http://localhost:3333/api/v1
 
+### Dashboard Tokenn
+GET {{host}}/dashboard
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjEsInVzZXJuYW1lIjoibWF1cmljaW8iLCJpYXQiOjE2Mzc1MDU5NTcsImV4cCI6MTY0MDA5Nzk1N30.qG-G7ZwFNStAYoUUmTw8ANDmd2Oqrei7I9hAuIQrUVo
+
 ### Dashboard
 GET {{host}}/dashboard
 
