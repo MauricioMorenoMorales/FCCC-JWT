@@ -1,5 +1,6 @@
-const CustomAPIError = require('../errors/custom-error');
 const jwt = require('jsonwebtoken');
+
+const { BadRequestError } = require('../errors');
 
 module.exports.login = async function (req, res) {
 	const { username, password } = req.body;
@@ -7,7 +8,7 @@ module.exports.login = async function (req, res) {
 	// Joi
 	// check in the controller
 	if (!username || !password) {
-		throw new CustomAPIError('Please provide email and password.', 400);
+		throw new BadRequestError('Please provide email and password.');
 	}
 	const id = new Date().getDate();
 	const token = jwt.sign({ id, username }, process.env.JWT_SECRET, {
